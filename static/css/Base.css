@@ -1,0 +1,372 @@
+/*!
+For the Navigation Menu
+ */
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+#navbar,
+#navbar ul,
+#navbar ul li,
+#navbar ul li a,
+#navbar #menu-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#navbar:after,
+#navbar > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#navbar #menu-button {
+  display: none;
+}
+#navbar {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1;
+  background: #ffffff;
+  width: auto;
+  margin-bottom: 2px;
+
+    z-index: 999;
+
+}
+#menu-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: -webkit-linear-gradient(left, #1d284b, #22fefe);
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+#navbar > ul > li {
+  float: left;
+}
+#navbar.align-center > ul {
+  font-size: 0;
+  text-align: center;
+}
+#navbar.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+#navbar.align-center ul ul {
+  text-align: left;
+}
+#navbar.align-right > ul > li {
+  float: right;
+}
+#navbar.align-right ul ul {
+  text-align: right;
+}
+#navbar > ul > li > a {
+  padding: 20px;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  -webkit-transition: color .2s ease;
+  -moz-transition: color .2s ease;
+  -ms-transition: color .2s ease;
+  -o-transition: color .2s ease;
+  transition: color .2s ease;
+}
+#navbar > ul > li:hover > a,
+#navbar > ul > li.active > a {
+     background-image: -webkit-linear-gradient(left,#672d91, #22fefe);
+    color: transparent;
+    -webkit-background-clip: text;
+
+}
+
+
+
+.gradient-icon{
+color:black;
+
+}
+
+#navbar > ul > li.has-sub > a {
+  padding-right: 25px;
+}
+#navbar > ul > li.has-sub > a::after {
+  position: absolute;
+  top: 21px;
+  right: 10px;
+  width: 4px;
+  height: 4px;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+  content: "";
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: border-color 0.2s ease;
+  -moz-transition: border-color 0.2s ease;
+  -ms-transition: border-color 0.2s ease;
+  -o-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+#navbar > ul > li.has-sub:hover > a::after {
+  border-color: #5bc0de;
+}
+#navbar ul ul {
+  position: absolute;
+  left: -9999px;
+}
+#navbar li:hover > ul {
+  left: auto;
+}
+#navbar.align-right li:hover > ul {
+  right: 0;
+}
+#navbar ul ul ul {
+  margin-left: 100%;
+  top: 0;
+}
+#navbar.align-right ul ul ul {
+  margin-left: 0;
+  margin-right: 100%;
+}
+#navbar ul ul li {
+  height: 0;
+  -webkit-transition: height .2s ease;
+  -moz-transition: height .2s ease;
+  -ms-transition: height .2s ease;
+  -o-transition: height .2s ease;
+  transition: height .2s ease;
+}
+#navbar ul li:hover > ul > li {
+  height: 32px;
+}
+#navbar ul ul li a {
+  padding: 10px 20px;
+  width: 160px;
+  font-size: 12px;
+  background: #333333;
+  text-decoration: none;
+  color: #dddddd;
+  -webkit-transition: color .2s ease;
+  -moz-transition: color .2s ease;
+  -ms-transition: color .2s ease;
+  -o-transition: color .2s ease;
+  transition: color .2s ease;
+}
+#navbar ul ul li:hover > a,
+#navbar ul ul li a:hover {
+  color: #ffffff;
+}
+#navbar ul ul li.has-sub > a::after {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  width: 4px;
+  height: 4px;
+  border-bottom: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  content: "";
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: border-color 0.2s ease;
+  -moz-transition: border-color 0.2s ease;
+  -ms-transition: border-color 0.2s ease;
+  -o-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+#navbar.align-right ul ul li.has-sub > a::after {
+  right: auto;
+  left: 10px;
+  border-bottom: 0;
+  border-right: 0;
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+}
+#navbar ul ul li.has-sub:hover > a::after {
+  border-color: #ffffff;
+}
+#navbar.small-screen {
+  width: 100%;
+}
+#navbar.small-screen ul {
+  width: 100%;
+  display: none;
+}
+#navbar.small-screen.align-center > ul,
+#navbar.small-screen.align-right ul ul {
+  text-align: left;
+}
+#navbar.small-screen ul li,
+#navbar.small-screen ul ul li,
+#navbar.small-screen ul li:hover > ul > li {
+  width: 100%;
+  height: auto;
+  border-top: 1px solid rgba(120, 120, 120, 0.15);
+}
+#navbar.small-screen ul li a,
+#navbar.small-screen ul ul li a {
+  width: 100%;
+}
+#navbar.small-screen > ul > li,
+#navbar.small-screen.align-center > ul > li,
+#navbar.small-screen.align-right > ul > li {
+  float: none;
+  display: block;
+}
+#navbar.small-screen ul ul li a {
+  padding: 20px 20px 20px 30px;
+  font-size: 12px;
+  color: #000000;
+  background: none;
+}
+#navbar.small-screen ul ul li:hover > a,
+#navbar.small-screen ul ul li a:hover {
+  color: #000000;
+}
+#navbar.small-screen ul ul ul li a {
+  padding-left: 40px;
+}
+#navbar.small-screen ul ul,
+#navbar.small-screen ul ul ul {
+  position: relative;
+  left: 0;
+  right: auto;
+  width: 100%;
+  margin: 0;
+}
+#navbar.small-screen > ul > li.has-sub > a::after,
+#navbar.small-screen ul ul li.has-sub > a::after {
+  display: none;
+}
+#navbar.small-screen #menu-line {
+  display: none;
+}
+#navbar.small-screen #menu-button {
+  display: block;
+  padding: 20px;
+  color: #000000;
+  cursor: pointer;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+#navbar.small-screen #menu-button::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+  width: 15px;
+  height: 2px;
+  background: #000000;
+}
+#navbar.small-screen #menu-button::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  display: block;
+  width: 15px;
+  height: 3px;
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+}
+#navbar.small-screen .submenu-button {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  display: block;
+  border-left: 1px solid rgba(120, 120, 120, 0.15);
+  height: 52px;
+  width: 52px;
+  cursor: pointer;
+}
+#navbar.small-screen .submenu-button::after {
+  content: '';
+  position: absolute;
+  top: 21px;
+  left: 26px;
+  display: block;
+  width: 1px;
+  height: 11px;
+  background: #000000;
+  z-index: 99;
+}
+#navbar.small-screen .submenu-button::before {
+  content: '';
+  position: absolute;
+  left: 21px;
+  top: 26px;
+  display: block;
+  width: 11px;
+  height: 1px;
+  background: #000000;
+  z-index: 99;
+}
+#navbar.small-screen .submenu-button.submenu-opened:after {
+  display: none;
+}
+#navbar.small-screen.select-list {
+  padding: 5px;
+}
+
+
+/* For the form addon */
+
+
+
+
+
+
+.bd-callout-info {
+    border-left-color: #5bc0de !important;
+}
+
+.bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #eee;
+    border-left-width: .25rem;
+    border-radius: .25rem;
+}
+
+
+
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
