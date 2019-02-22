@@ -1,0 +1,629 @@
+2019-01-17 13:36:06,759 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-17 18:00:42,881 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-17 18:00:52,305 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-17 19:13:31,867 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-17 19:13:34,554 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-17 19:13:38,364 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-17 19:13:45,013 - resources.Blero.helpers - INFO - ---------Starting Property Analysis---------
+2019-01-17 19:13:45,128 - resources.Blero.helpers - DEBUG - 5
+2019-01-17 19:13:45,141 - resources.Blero.helpers - INFO - -------------Analysis Finished-------------
+2019-01-19 08:49:37,723 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-19 08:49:43,251 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-19 09:09:35,190 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:09:35,190 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:14:48,196 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:14:48,719 - resources.Blero.helpers - DEBUG - <paramiko.ChannelFile from <paramiko.Channel 0 (open) window=2097152 -> <paramiko.Transport at 0xcb908630 (cipher aes128-ctr, 128 bits) (active; 1 open channel(s))>>>
+2019-01-19 09:15:29,021 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:20:02,915 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:20:05,817 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:20:05,817 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:20:10,695 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:20:10,695 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:20:10,695 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:20:36,775 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:20:55,908 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:20:58,650 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:20:58,650 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:21:17,598 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:21:17,976 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 21, in GetScrapStatus
+    ftp_client.get('/enviroments/MetrosCubicos/MetrosCubicos.db', 'resources/dashboards/metros-cubicos-scrap-monitor/temp/MetrosCubicos.db')
+  File "/virtualenv/lib/python3.5/site-packages/paramiko/sftp_client.py", line 801, in get
+    with open(localpath, "wb") as fl:
+FileNotFoundError: [Errno 2] No such file or directory: 'resources/dashboards/metros-cubicos-scrap-monitor/temp/MetrosCubicos.db'
+2019-01-19 09:21:34,698 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:21:35,827 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 09:21:35,833 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/excel.py", line 352, in __init__
+    import xlrd
+ImportError: No module named 'xlrd'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 25, in GetScrapStatus
+    district_links=pd.read_excel("../temp/MetrosCubicos.db")
+  File "/virtualenv/lib/python3.5/site-packages/pandas/util/_decorators.py", line 178, in wrapper
+    return func(*args, **kwargs)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/util/_decorators.py", line 178, in wrapper
+    return func(*args, **kwargs)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/excel.py", line 307, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/excel.py", line 354, in __init__
+    raise ImportError(err_msg)
+ImportError: Install xlrd >= 0.9.0 for Excel support
+2019-01-19 09:23:01,228 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:23:03,237 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 09:23:03,238 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/excel.py", line 352, in __init__
+    import xlrd
+ImportError: No module named 'xlrd'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 25, in GetScrapStatus
+    district_links=pd.read_excel("../temp/MetrosCubicos.db")
+  File "/virtualenv/lib/python3.5/site-packages/pandas/util/_decorators.py", line 178, in wrapper
+    return func(*args, **kwargs)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/util/_decorators.py", line 178, in wrapper
+    return func(*args, **kwargs)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/excel.py", line 307, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/excel.py", line 354, in __init__
+    raise ImportError(err_msg)
+ImportError: Install xlrd >= 0.9.0 for Excel support
+2019-01-19 09:23:48,048 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:23:48,287 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 21, in GetScrapStatus
+    ftp_client.get('/enviroments/MetrosCubicos/MetrosCubicos.db', 'resources/metros-cubios-scrap-monitor/MetrosCubicos.db')
+  File "/virtualenv/lib/python3.5/site-packages/paramiko/sftp_client.py", line 801, in get
+    with open(localpath, "wb") as fl:
+FileNotFoundError: [Errno 2] No such file or directory: 'resources/metros-cubios-scrap-monitor/MetrosCubicos.db'
+2019-01-19 09:24:22,458 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:24:23,227 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 21, in GetScrapStatus
+    ftp_client.get('/enviroments/MetrosCubicos/MetrosCubicos.db', 'resources/dashboards/metros-cubios-scrap-monitor/MetrosCubicos.db')
+  File "/virtualenv/lib/python3.5/site-packages/paramiko/sftp_client.py", line 801, in get
+    with open(localpath, "wb") as fl:
+FileNotFoundError: [Errno 2] No such file or directory: 'resources/dashboards/metros-cubios-scrap-monitor/MetrosCubicos.db'
+2019-01-19 09:26:13,479 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:26:14,611 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 09:26:14,612 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/excel.py", line 352, in __init__
+    import xlrd
+ImportError: No module named 'xlrd'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 25, in GetScrapStatus
+    district_links=pd.read_excel("../temp/MetrosCubicos.db")
+  File "/virtualenv/lib/python3.5/site-packages/pandas/util/_decorators.py", line 178, in wrapper
+    return func(*args, **kwargs)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/util/_decorators.py", line 178, in wrapper
+    return func(*args, **kwargs)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/excel.py", line 307, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/excel.py", line 354, in __init__
+    raise ImportError(err_msg)
+ImportError: Install xlrd >= 0.9.0 for Excel support
+2019-01-19 09:28:03,537 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:28:03,537 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:28:05,410 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 09:28:05,410 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 09:28:05,419 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 25, in GetScrapStatus
+    district_links=pd.read_excel("../temp/MetrosCubicos.db")
+  File "/virtualenv/lib/python3.5/site-packages/pandas/util/_decorators.py", line 178, in wrapper
+    return func(*args, **kwargs)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/util/_decorators.py", line 178, in wrapper
+    return func(*args, **kwargs)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/excel.py", line 307, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/excel.py", line 394, in __init__
+    self.book = xlrd.open_workbook(self._io)
+  File "/virtualenv/lib/python3.5/site-packages/xlrd/__init__.py", line 111, in open_workbook
+    with open(filename, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '../temp/MetrosCubicos.db'
+2019-01-19 09:28:05,419 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 25, in GetScrapStatus
+    district_links=pd.read_excel("../temp/MetrosCubicos.db")
+  File "/virtualenv/lib/python3.5/site-packages/pandas/util/_decorators.py", line 178, in wrapper
+    return func(*args, **kwargs)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/util/_decorators.py", line 178, in wrapper
+    return func(*args, **kwargs)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/excel.py", line 307, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/excel.py", line 394, in __init__
+    self.book = xlrd.open_workbook(self._io)
+  File "/virtualenv/lib/python3.5/site-packages/xlrd/__init__.py", line 111, in open_workbook
+    with open(filename, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '../temp/MetrosCubicos.db'
+2019-01-19 09:28:23,982 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:28:25,061 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 09:28:25,078 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 25, in GetScrapStatus
+    district_links=pd.read_excel("MetrosCubicos.db")
+  File "/virtualenv/lib/python3.5/site-packages/pandas/util/_decorators.py", line 178, in wrapper
+    return func(*args, **kwargs)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/util/_decorators.py", line 178, in wrapper
+    return func(*args, **kwargs)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/excel.py", line 307, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/excel.py", line 394, in __init__
+    self.book = xlrd.open_workbook(self._io)
+  File "/virtualenv/lib/python3.5/site-packages/xlrd/__init__.py", line 157, in open_workbook
+    ragged_rows=ragged_rows,
+  File "/virtualenv/lib/python3.5/site-packages/xlrd/book.py", line 92, in open_workbook_xls
+    biff_version = bk.getbof(XL_WORKBOOK_GLOBALS)
+  File "/virtualenv/lib/python3.5/site-packages/xlrd/book.py", line 1278, in getbof
+    bof_error('Expected BOF record; found %r' % self.mem[savpos:savpos+8])
+  File "/virtualenv/lib/python3.5/site-packages/xlrd/book.py", line 1272, in bof_error
+    raise XLRDError('Unsupported format, or corrupt file: ' + msg)
+xlrd.biffh.XLRDError: Unsupported format, or corrupt file: Expected BOF record; found b'SQLite f'
+2019-01-19 09:29:55,959 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:29:57,068 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 09:29:57,071 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 25, in GetScrapStatus
+    district_links=pd.read_csv("DistrictRecords.csv")
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/parsers.py", line 678, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/parsers.py", line 440, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/parsers.py", line 787, in __init__
+    self._make_engine(self.engine)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/parsers.py", line 1014, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/parsers.py", line 1708, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 384, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 695, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: File b'DistrictRecords.csv' does not exist
+2019-01-19 09:31:15,181 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:31:16,294 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 09:31:16,302 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 25, in GetScrapStatus
+    district_links=pd.read_csv("resources/dashboards/metros-cubicos-scrap-monitor/DistrictRecords.csv")
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/parsers.py", line 678, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/parsers.py", line 446, in _read
+    data = parser.read(nrows)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/parsers.py", line 1036, in read
+    ret = self._engine.read(nrows)
+  File "/virtualenv/lib/python3.5/site-packages/pandas/io/parsers.py", line 1848, in read
+    data = self._reader.read(nrows)
+  File "pandas/_libs/parsers.pyx", line 876, in pandas._libs.parsers.TextReader.read
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._read_low_memory
+  File "pandas/_libs/parsers.pyx", line 945, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 932, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 2112, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 1 fields in line 7, saw 8
+
+2019-01-19 09:32:07,263 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:32:07,726 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 09:32:25,275 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 09:32:25,587 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 09:32:25,598 - resources.Blero.helpers - DEBUG -     read                        ...                                                                   district
+0      1                        ...                          https://inmuebles.metroscubicos.com/renta/dist...
+1      0                        ...                          https://inmuebles.metroscubicos.com/renta/nuev...
+2      0                        ...                          https://inmuebles.metroscubicos.com/renta/esta...
+3      1                        ...                          https://inmuebles.metroscubicos.com/renta/quer...
+4      1                        ...                          https://inmuebles.metroscubicos.com/renta/coah...
+5      0                        ...                          https://inmuebles.metroscubicos.com/renta/puebla/
+6      0                        ...                          https://inmuebles.metroscubicos.com/renta/jali...
+7      0                        ...                          https://inmuebles.metroscubicos.com/renta/vera...
+8      0                        ...                          https://inmuebles.metroscubicos.com/renta/quin...
+9      0                        ...                          https://inmuebles.metroscubicos.com/venta/dist...
+10     0                        ...                          https://inmuebles.metroscubicos.com/venta/esta...
+11     1                        ...                          https://inmuebles.metroscubicos.com/venta/quer...
+12     0                        ...                          https://inmuebles.metroscubicos.com/venta/nuev...
+13     0                        ...                          https://inmuebles.metroscubicos.com/venta/more...
+14     0                        ...                          https://inmuebles.metroscubicos.com/venta/quin...
+15     0                        ...                          https://inmuebles.metroscubicos.com/venta/yuca...
+16     0                        ...                          https://inmuebles.metroscubicos.com/venta/jali...
+17     0                        ...                          https://inmuebles.metroscubicos.com/venta/vera...
+18     0                        ...                          https://inmuebles.metroscubicos.com/venta/puebla/
+
+[19 rows x 3 columns]
+2019-01-19 10:13:03,819 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:13:04,619 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:13:04,630 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 26, in GetScrapStatus
+    dict_form['district_records']=district_records.to_jso(orient='index')
+  File "/virtualenv/lib/python3.5/site-packages/pandas/core/generic.py", line 4376, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'to_jso'
+2019-01-19 10:14:11,857 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:14:11,857 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:14:12,138 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:14:12,138 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:14:12,145 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 26, in GetScrapStatus
+    dict_form['district_records']=district_records.to_jso(orient='index')
+  File "/virtualenv/lib/python3.5/site-packages/pandas/core/generic.py", line 4376, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'to_jso'
+2019-01-19 10:14:12,145 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 26, in GetScrapStatus
+    dict_form['district_records']=district_records.to_jso(orient='index')
+  File "/virtualenv/lib/python3.5/site-packages/pandas/core/generic.py", line 4376, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'to_jso'
+2019-01-19 10:14:51,865 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:14:51,865 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:14:51,865 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:14:52,170 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:14:52,170 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:14:52,170 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:14:52,177 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 26, in GetScrapStatus
+    dict_form['district_records']=district_records.to_jso(orient='index')
+  File "/virtualenv/lib/python3.5/site-packages/pandas/core/generic.py", line 4376, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'to_jso'
+2019-01-19 10:14:52,177 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 26, in GetScrapStatus
+    dict_form['district_records']=district_records.to_jso(orient='index')
+  File "/virtualenv/lib/python3.5/site-packages/pandas/core/generic.py", line 4376, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'to_jso'
+2019-01-19 10:14:52,177 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 26, in GetScrapStatus
+    dict_form['district_records']=district_records.to_jso(orient='index')
+  File "/virtualenv/lib/python3.5/site-packages/pandas/core/generic.py", line 4376, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'to_jso'
+2019-01-19 10:15:26,420 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:15:26,420 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:15:26,420 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:15:26,420 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:15:26,951 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:15:26,951 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:15:26,951 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:15:26,951 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:15:26,961 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 26, in GetScrapStatus
+    dict_form['district_records']=district_records.to_jso(orient='index')
+  File "/virtualenv/lib/python3.5/site-packages/pandas/core/generic.py", line 4376, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'to_jso'
+2019-01-19 10:15:26,961 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 26, in GetScrapStatus
+    dict_form['district_records']=district_records.to_jso(orient='index')
+  File "/virtualenv/lib/python3.5/site-packages/pandas/core/generic.py", line 4376, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'to_jso'
+2019-01-19 10:15:26,961 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 26, in GetScrapStatus
+    dict_form['district_records']=district_records.to_jso(orient='index')
+  File "/virtualenv/lib/python3.5/site-packages/pandas/core/generic.py", line 4376, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'to_jso'
+2019-01-19 10:15:26,961 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 26, in GetScrapStatus
+    dict_form['district_records']=district_records.to_jso(orient='index')
+  File "/virtualenv/lib/python3.5/site-packages/pandas/core/generic.py", line 4376, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'to_jso'
+2019-01-19 10:16:26,073 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:16:26,715 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:22:02,488 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:22:02,488 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:22:02,782 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:22:02,782 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:24:30,578 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:24:30,578 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:24:30,578 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:24:30,845 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:24:30,845 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:24:30,845 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:25:33,322 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:25:33,322 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:25:33,322 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:25:33,322 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:25:33,622 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:25:33,622 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:25:33,622 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:25:33,622 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:26:24,684 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:26:24,684 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:26:24,684 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:26:24,684 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:26:24,684 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:26:25,444 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:26:25,444 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:26:25,444 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:26:25,444 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:26:25,444 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:03,616 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:03,616 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:03,616 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:03,616 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:03,616 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:03,616 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:03,909 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:03,909 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:03,909 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:03,909 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:03,909 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:03,909 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:20,423 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:20,423 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:20,423 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:20,423 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:20,423 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:20,423 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:20,423 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:20,975 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:20,975 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:20,975 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:20,975 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:20,975 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:20,975 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:20,975 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:53,824 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:53,824 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:53,824 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:53,824 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:53,824 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:53,824 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:53,824 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:53,824 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:30:54,410 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:54,410 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:54,410 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:54,410 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:54,410 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:54,410 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:54,410 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:30:54,410 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:33:32,019 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:33:32,019 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:33:32,019 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:33:32,019 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:33:32,019 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:33:32,019 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:33:32,019 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:33:32,019 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:33:32,019 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:33:32,658 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:33:32,658 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:33:32,658 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:33:32,658 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:33:32,658 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:33:32,658 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:33:32,658 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:33:32,658 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:33:32,658 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:11,821 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:11,821 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:11,821 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:11,821 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:11,821 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:11,821 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:11,821 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:11,821 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:11,821 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:11,821 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:12,122 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:12,122 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:12,122 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:12,122 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:12,122 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:12,122 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:12,122 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:12,122 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:12,122 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:12,122 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:55,015 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:55,015 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:55,015 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:55,015 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:55,015 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:55,015 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:55,015 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:55,015 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:55,015 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:55,015 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:55,015 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:37:55,288 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:55,288 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:55,288 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:55,288 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:55,288 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:55,288 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:55,288 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:55,288 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:55,288 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:55,288 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:37:55,288 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:38:15,219 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:38:15,219 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:38:15,219 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:38:15,219 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:38:15,219 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:38:15,219 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:38:15,219 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:38:15,219 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:38:15,219 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:38:15,219 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:38:15,219 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:38:15,219 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:38:15,496 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:38:15,496 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:38:15,496 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:38:15,496 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:38:15,496 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:38:15,496 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:38:15,496 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:38:15,496 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:38:15,496 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:38:15,496 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:38:15,496 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:38:15,496 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:39:45,185 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:39:45,185 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:39:45,185 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:39:45,185 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:39:45,185 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:39:45,185 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:39:45,185 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:39:45,185 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:39:45,185 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:39:45,185 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:39:45,185 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:39:45,185 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:39:45,185 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:39:45,453 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:39:45,453 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:39:45,453 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:39:45,453 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:39:45,453 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:39:45,453 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:39:45,453 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:39:45,453 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:39:45,453 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:39:45,453 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:39:45,453 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:39:45,453 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:39:45,453 - resources.Blero.helpers - DEBUG - TEST
+2019-01-19 10:46:41,113 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:48:02,382 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:48:02,382 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:49:16,163 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:49:16,163 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:49:16,163 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:57:48,555 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 10:57:48,956 - resources.Blero.helpers - ERROR - error
+Traceback (most recent call last):
+  File "/app/resources/dashboards/metros-cubicos-scrap-monitor/FormFunctions.py", line 23, in GetScrapStatus
+    dict_form['district_update']=stdout.readlines()[0]
+IndexError: list index out of range
+2019-01-19 11:00:34,107 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 11:01:41,046 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 11:01:41,046 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 11:09:52,238 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 11:09:52,238 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 11:09:52,238 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 15:23:04,198 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 15:23:04,198 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 15:23:04,198 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 15:23:04,198 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 15:33:19,570 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 15:33:19,570 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 15:33:19,570 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 15:33:19,570 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-19 15:33:19,570 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 12:00:43,533 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 12:00:43,533 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 12:00:43,533 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 12:00:43,533 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 12:00:43,533 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 12:01:02,912 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 12:01:02,912 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 12:01:02,912 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 12:01:02,912 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 12:01:02,912 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 12:01:08,227 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 12:01:08,227 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 12:01:08,227 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 12:01:08,227 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 12:01:08,227 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 12:01:08,227 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 13:46:26,476 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:46:26,476 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:46:26,476 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:46:26,476 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:46:26,476 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:46:26,476 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:46:34,445 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:46:34,445 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:46:34,445 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:46:34,445 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:46:34,445 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:46:34,445 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:47:58,775 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 13:47:58,775 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 13:47:58,775 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 13:47:58,775 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 13:47:58,775 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 13:47:58,775 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 13:47:58,775 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 13:48:45,767 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:45,767 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:45,767 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:45,767 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:45,767 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:45,767 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:45,767 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:52,384 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:52,384 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:52,384 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:52,384 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:52,384 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:52,384 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:52,384 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:59,439 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:59,439 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:59,439 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:59,439 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:59,439 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:59,439 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 13:48:59,439 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-21 19:24:21,082 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 19:26:15,675 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 19:26:15,675 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 19:26:19,293 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 19:26:19,293 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-21 19:26:19,293 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 08:20:58,007 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 08:20:58,007 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 08:20:58,007 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 08:20:58,007 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 08:22:14,503 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 08:22:14,503 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 08:22:14,503 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 08:22:14,503 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 08:23:07,736 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-22 08:23:07,736 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-22 08:23:07,736 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-22 08:23:07,736 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-22 08:23:12,327 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 08:23:12,327 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 08:23:12,327 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 08:23:12,327 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 09:38:43,450 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-22 09:38:43,450 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-22 09:38:43,450 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-22 09:38:43,450 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-22 09:38:50,200 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-22 09:38:50,200 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-22 09:38:50,200 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-22 09:38:50,200 - resources.Blero.helpers - INFO - Data trasnformed and filtered for prices
+2019-01-22 09:38:56,460 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 09:38:56,460 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 09:38:56,460 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 09:38:56,460 - resources.Blero.helpers - DEBUG - ---------Start Function---------
+2019-01-22 09:38:56,460 - resources.Blero.helpers - DEBUG - ---------Start Function---------

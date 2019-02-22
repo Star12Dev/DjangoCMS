@@ -1,0 +1,15 @@
+#this file should hold the functions that can be selected in each dashboard, do not delete or rename this file
+
+import json
+from resources.Blero.helpers import SetUserLog
+import sqlite3
+import pandas as pd
+
+
+def SampleFunction(dict_form,data_1,data_2,logfile_name):
+    # first step to interact with Blero is to  initialize the logger file.
+    logger=SetUserLog(logfile_name)
+    logger.debug("---------Start Function---------")
+    #get Fields from form by Field Name
+
+    return json.dumps(dict_form)
