@@ -1,0 +1,142 @@
+<div class="blero-grid-wrapper" id="{{ instance.pk }}" style="{% if position.is_resized %}top:{{ position.top }};
+    left:{{ position.left }}; width:{{ position.width }}; height:{{ position.height }};{% else %}height:  300px;
+    width:100%;{% endif %}background-color: white;padding: 0px;overflow: hidden;cursor: -webkit-grab; cursor: grab;">
+
+        <i style="margin-left: 1px" class="fa fa-info fa-lg" title="hot id=hot{{ instance.pk }}"></i>
+        <input id="save_grid_button{{ instance.pk }}" type="button" value="Save Grid" onclick="save_grid{{ instance.pk }}();" />
+        <div id="blero-grid-{{ instance.grid_label }}" >
+            <h5>{{ instance.grid_label }}</h5>
+        </div>
+
+        <div id="hot{{ instance.pk }}" grid_id="{{ instance.pk }}"></div>
+</div>
+
+
+
+
+
+<!-- Modal -->
+{#<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">#}
+{#  <div class="modal-dialog" role="document">#}
+{#    <div class="modal-content">#}
+{#      <div class="modal-header">#}
+{#        <h5 class="modal-title" id="exampleModalLabel">Edit window</h5>#}
+{#        <button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
+{#          <span aria-hidden="true">&times;</span>#}
+{#        </button>#}
+{#      </div>#}
+{#      <div class="modal-body">#}
+{#        <div class="form-group">#}
+{#        <label for="cell_content">Cell Content:</label>#}
+{#        <input type="text" class="form-control" id="cell_content">#}
+{#        </div>#}
+{#      </div>#}
+{#      <div class="modal-footer">#}
+{#        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>#}
+{#        <button type="button" class="btn btn-primary">Save changes</button>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+{#</div>#}
+
+
+
+<script>
+
+
+
+
+
+
+    //Code for modal
+
+    var container = document.getElementById('hot{{ instance.pk }}');
+    var test={{ columns |length }};
+    var hot{{ instance.pk }}=new Handsontable(container,{
+    startCols: {{ columns |length }},
+    startRows: {{ rows |length }},
+    rowHeaders: true,
+
+    manualColumnResize: true,
+    manualRowResize: true,
+    colHeaders: true,
+            contextMenu: {
+            callback: function (key, selection, clickEvent) {
+              console.log(key, selection, clickEvent);
+            },
+            items: {
+                add_row: {
+                    name: 'Edit Column Value',
+                    callback: function () {
+                        console.log('add_row')
+                        $('#exampleModal').modal('show');
+
+                    }
+                },
+                add_column: {
+                    name: 'Format Column',
+                    callback: function () {
+                        console.log('add_column')
+                    }
+                },
+                edit_format: {
+                    name: 'Format Cell ',
+                    callback: function () {
+                        console.log('Format')
+                    }
+                },
+            }
+        },
+
+
+        });
+
+
+    //Update Cell values
+
+    {% for key, value in cell_data.items %}
+        hot{{ instance.pk }}.setDataAtCell({{ key }},{{ value.column_number }},'{{ value.cell_content }}');
+
+    {% endfor %}
+
+
+
+
+</script>
+
+<script>
+
+function save_grid{{ instance.pk }}() {
+
+    data=[]
+    var grid_values=hot{{ instance.pk }}.getData();
+    var col_values = hot{{ instance.pk }}.getColHeader();
+    var row_values=hot{{ instance.pk }}.getRowHeader();
+
+    console.log(grid_values);
+
+    $.ajax({
+        type: "POST",
+        url: "/blero_grid/",
+        data: {
+            grid_values:grid_values,
+            col_values: col_values,
+            row_values: row_values,
+            model_id:{{ instance.pk }},
+
+        },
+        success: function (data) {
+
+            console.log('Grid Saved {{ instance.pk }}')
+
+        },
+        error: function (x, t, m) {
+            console.log("error on AJAX from grid {{ instance.pk }}");
+            console.log("error"+m);
+
+
+        }
+    });
+}
+
+</script>

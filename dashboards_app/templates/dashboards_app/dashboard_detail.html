@@ -1,0 +1,27 @@
+{% extends "dashboards_app/base.html" %}
+{% load i18n cms_tags apphooks_config_tags %}
+
+{% block javascript-top %}
+
+
+{% endblock javascript-top%}
+
+{% block title %}
+    {{ dashboard.title }} - {{ block.super }}
+{% endblock %}
+
+{% block dashboards_app_content %}
+    {% include "dashboards_app/includes/dashboard.html" with detail_view="true" %}
+
+
+
+{#    <ul>#}
+{#        {% if prev_dashboard %}#}
+{#            <li><a href="{{ prev_dashboard.get_absolute_url }}">{% trans "Previous Dashboard" %}</a></li>#}
+{#        {% endif %}#}
+{#        <li><a href="{% namespace_url "dashboard-list" %}">{% trans "Back to Overview" %}</a></li>#}
+{#        {% if next_dashboard %}#}
+{#            <li><a href="{{ next_dashboard.get_absolute_url }}">{% trans "Next Dashboard" %}</a></li>#}
+{#        {% endif %}#}
+{#    </ul>#}
+{% endblock %}

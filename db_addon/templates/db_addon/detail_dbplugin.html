@@ -1,0 +1,148 @@
+
+
+
+<div id="database-information-{{ plugin.id }}" class="bd-callout bd-callout-info col-md-6 db-info" style="display:none">
+<p>Database Details:</p>
+<span class="badge badge-secondary">{{ instance.database_table_name }}</span>
+<span class="badge badge-secondary">{{ instance.database_filter_column }}</span>
+<span class="badge badge-secondary">{{ instance.database_py_function }}</span>
+<span class="badge badge-secondary">{{ filtered_column }}</span>
+</div>
+
+<div id="table-holder-{{ plugin.id }}" class="bd-callout bd-callout-info" style="display: none; overflow-y:auto;    margin-right: 5%;padding-right: 5%; width: 100%; float:left ; height:100%;background-color: #f5f7f9;">
+
+        <style>
+            tr.group,
+            tr.group:hover {
+                background-color: #696969 !important;
+                cursor: pointer;
+                color: white;
+            }
+
+            tbody {
+            }                       
+
+            tr {
+                width: 100%;
+            }
+
+            td{
+                font-size: 10px;
+                width: 100%;
+            }
+            th{
+                padding: 6px;
+                font-size: 10px;
+                width: 100%;
+            }
+
+            .dataTables_filter {
+                  float: left !important;
+                  font-size: 10px;
+            }
+
+
+            ::-webkit-scrollbar {
+                display: none;
+            }
+
+            .context-menu-item > label{
+                color: #404040!important;
+                font-size: 10px;
+            }
+
+            .my-oneline {
+                overflow: auto;
+                
+                height: 200px;
+                
+            }
+
+            .my-out {
+                display: inline;
+                float: left;
+                max-width: 50%;
+            }
+
+
+            .my-selectAll {
+                top: calc(100% + 4px) !important;
+            }
+
+
+            table.dataTable tbody th,
+            table.dataTable tbody td {
+                white-space: nowrap;
+
+            }
+
+            table-layout:fixed
+
+
+        </style>
+
+
+
+
+        
+
+
+        <!-- NEVER DELETE ---->
+        <ul style="visibility: hidden;height: 0%">
+            <!-- <ul> -->
+
+        <li id="database-table-name-{{ plugin.id }}">{{ instance.database_table_name }}</li>
+        <li id="database-filter-column-{{ plugin.id }}">{{ instance.database_filter_column }}</li>
+        <li id="database-py-function-{{ plugin.id }}">{{ instance.database_py_function }}</li>
+        <li id="database-filtered-column-{{ plugin.id }}">{{ filtered_column }}</li>
+        <li id="database-total-columns-{{ plugin.id }}">{{ total_columns }}</li>
+        <li id="database-pluginid-{{ plugin.id }}">{{ plugin.id }}</li>
+         </ul>
+        <!---------->
+
+        <!-- <table id="myDataTable" class="table table-striped table-bordered my-oneline">
+            <thead>
+                <tr>
+                    <th>Selected</th>
+                    <th>Remove</th>
+                    
+                </tr>
+            </thead>
+            <tbody> 
+            </tbody>
+
+        <table id="myDataTable" class="table table-striped table-bordered my-oneline">
+            <thead>
+                <tr>
+                    <th>Selected</th>
+                    <th>Remove</th>
+                    
+                </tr>
+            </thead>
+            <tbody> 
+            </tbody>
+
+        <table id="myDataTable" class="table table-striped table-bordered my-oneline my-cur">
+            <thead>
+                <tr>
+                    <th>Selected</th>
+                    <th>Remove</th>
+                    
+                </tr>
+            </thead>
+            <tbody> 
+            </tbody> -->
+
+        
+        
+
+
+        {% autoescape off %}
+                    {{ data_table }}
+        {% endautoescape %}
+    </div>
+    <!--<script>-->
+    <!---->
+        <!--$('.display.compact.data-table-display.dataTable.no-footer').css('width', '735px');-->
+        <!--$('.dataTables_scrollHead .dataTables_scrollHeadInner').css('width', '735px');-->
+    <!--</script>-->

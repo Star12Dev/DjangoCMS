@@ -1,0 +1,12 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load cms_tags %}
+
+
+
+{% block content %}
+    {% block dashboards_app_content %}
+        {# dashboard_list.html and dashboard_detail.html extend this template #}
+    {% endblock %}
+{% endblock content %}

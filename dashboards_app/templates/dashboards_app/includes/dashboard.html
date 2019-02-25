@@ -1,0 +1,277 @@
+{% load i18n staticfiles thumbnail cms_tags apphooks_config_tags %}
+
+
+    {% block javascript-top %}
+
+
+
+
+    {% endblock javascript-top%}
+
+{% block stylesheets %}
+<link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+{% endblock stylesheets %}
+
+
+
+
+    {% if dashboard.categories.exists %}
+        <p>
+            {% for category in dashboard.categories.all %}
+                <a href="{% namespace_url 'dashboard-list-by-category' category.slug namespace=namespace default='' %}">{{ category.name }}</a>
+                {% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        </p>
+    {% endif %}
+
+    {% if detail_view %}
+        <div class="dashboard_title" >
+            <!-- 'dashboard_title_value' this id is extremely important to send dashboard name on ajax requests-->
+            <p id='dashboard_title_value' class="title">
+            {% if not detail_view %}
+                <a href="{% namespace_url 'dashboard-detail' dashboard.slug namespace=namespace default='' %}">{% render_model dashboard "title" %}</a>
+            {% else %}
+                 {% render_model dashboard "title" %}
+            {% endif %}
+            </p>
+            <p id="dashboard_author_value" style="display:none">{% render_model dashboard "author" %}</p>
+            <p id="dashboard_id_value" style="display:none">{{ dashboard.id }}</p>
+
+
+
+
+        </div>
+        <div class="dashboard_settings">
+            <span class="exit-mode">
+                <a href="#" id="btn_edit_mode"><i class="fa fa-save" aria-hidden="true"></i> Edit Mode </a>
+            </span>
+            <span class="edit-mode hide">
+                <a href="#" id="btn_exit_mode"><i class="fa fa-save" aria-hidden="true"></i> Exit Mode </a>
+                <a href="#" id="save_view"><i class="fa fa-save" aria-hidden="true"></i> Save View</a>
+                <a href="#" id="restore_view"><i class="fa fa-repeat" aria-hidden="true"></i> Restore Views</a>
+                <a href="/documentation/{{ dashboard.id }}" target="_blank" id="Documentation"><i class="fa fa-book" aria-hidden="true"></i>  Documentation</a>
+            </span>
+
+
+
+
+
+
+        </div>
+
+
+
+        <!-- sidebar -->
+        <div id="dash_sidebar"  class="dash-sidebar">
+            <div id="split-bar"><i class="fa fa-exchange fa-2x"></i></div>
+
+            {% render_placeholder dashboard.sidebar_content language placeholder_language %}
+
+        </div>
+
+
+        <!-- main -->
+
+        <div id="main_body" class="main_body" style="height: 100%;overflow: auto">
+
+            <div class="full_container">
+
+    {#    {% include "dashboards_app/includes/author.html" with author=dashboard.author %}#}
+
+         <!--
+                <div class="dashboard_lead">
+{#                {% render_model dashboard "lead_in" %}#}
+                </div>
+
+         -->
+                
+                {% render_placeholder dashboard.content language placeholder_language %}
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endif %}
+{#</dashboard>#}
+
+
+
+<script>
+var min = 30;
+var max = 3600;
+var mainmin = 200;
+
+$('#split-bar').mousedown(function (e) {
+    e.preventDefault();
+    $(document).mousemove(function (e) {
+        e.preventDefault();
+        var x = e.pageX - $('#dash_sidebar').offset().left;
+        if (x > min && x < max && e.pageX < ($(window).width() - mainmin)) {
+          $('#dash_sidebar').css("width", x);
+          $('#main_body').css("margin-left", x);
+
+          if (x>200){
+          $('#db_sidebar_container').css("display","block")
+          }
+          else{
+              $('#db_sidebar_container').css("display","none")
+          }
+        }
+    })
+});
+$(document).mouseup(function (e) {
+    $(document).unbind('mousemove');
+});
+
+
+
+
+</script>
+
+{#<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>#}
+<script src="{% static 'js/plugins.js' %}"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- Add on links -->
+<script src="{% static 'js/form_addon.js' %}"></script>
+<script src="{% static 'js/db_addon.js' %}"></script>
+<!-- <script src="{% static 'js/dashboard.js'}"></script> -->
+
+
+<!-- Why are these  styles here????
+<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/south-street/jquery-ui.min.css" rel="stylesheet"
+      type="text/css"/>
+
+      -->
+<link href="//cdn.datatables.net/plug-ins/725b2a2115b/integration/jqueryui/dataTables.jqueryui.css" rel="stylesheet"
+      type="text/css"/>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<script src="//cdn.datatables.net/1.10.2/js/jquery.dataTables.js"></script>
+<script src="//cdn.datatables.net/colreorder/1.1.2/js/dataTables.colReorder.min.js"></script>
+<script src="//cdn.datatables.net/plug-ins/725b2a2115b/api/fnFilterClear.js"></script>
+
+
+
+<link rel="stylesheet" href="https://swisnl.github.io/jQuery-contextMenu/css/screen.css" type="text/css"/>
+<!-- The code below has  issues with bootstrap CSS
+<link rel="stylesheet" href="https://swisnl.github.io/jQuery-contextMenu/css/theme.css" type="text/css"/>
+<!-- The ABOVE REVIEW IF IS NEEDED below has  issues with bootstrap CSS -->
+<link rel="stylesheet" href="https://swisnl.github.io/jQuery-contextMenu/css/theme-fixes.css" type="text/css"/>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<link href="https://swisnl.github.io/jQuery-contextMenu/dist/jquery.contextMenu.css" rel="stylesheet" type="text/css" />
+
+
+
+<script src="https://swisnl.github.io/jQuery-contextMenu/dist/jquery.contextMenu.js" type="text/javascript"></script>
+
+<script src="https://swisnl.github.io/jQuery-contextMenu/dist/jquery.ui.position.min.js" type="text/javascript"></script>
+
+<script src="https://swisnl.github.io/jQuery-contextMenu/js/main.js" type="text/javascript"></script>
+
+{#d3#}
+<script src='https://d3js.org/d3.v5.min.js'></script>
+<script>
+var token = '{{ csrf_token }}';
+
+  $( function() {
+
+
+      $(document).tooltip();
+      $(".submit_form_addon").draggable().resizable();
+
+      $(".form-element-label").draggable().resizable();
+      $(".form-element-label").on('resize', function (event, ui) {
+        $(this).css('width', ui.size.width + 'px');
+        $(this).css('height', ui.size.height + 'px');
+      });
+
+      $(".form-element-container").draggable({
+          start: function (event, ui) {
+              $(this).data('preventBehaviour', true);
+          }
+      });
+
+      $(".form-element-container input").on('mousedown', function (e) {
+          var mdown = new MouseEvent("mousedown", {
+              screenX: e.screenX,
+              screenY: e.screenY,
+              clientX: e.clientX,
+              clientY: e.clientY,
+              view: window
+          });
+          $(this).closest('.form-element-container')[0].dispatchEvent(mdown);
+      }).on('click', function (e) {
+          var $draggable = $(this).closest('.form-element-container');
+          if ($draggable.data("preventBehaviour")) {
+              e.preventDefault();
+              $draggable.data("preventBehaviour", false)
+          }
+      });
+      $(".form-element-container").resizable({
+        create: function (event, ui) {
+          var width = $(this).attr('data-width');
+          if (width) {
+            $(this).find('.ui-wrapper').css('width',width);
+            $(this).find('.ui-wrapper input').css('width', width);
+            $(this).find('.ui-wrapper input').css('height', $(this).css('height'));
+          }
+        },
+        resize: function (event, ui) {
+          $(this).find('.form-element').css('height', $(this).css('height'))
+          $(this).css('flex-basis', 'auto');
+        }
+      });
+      $(".form-element").each(function (index) {
+        $(this).css('height', $(this).closest('.form-element-container').css('height'));
+      })
+
+    $( ".blero-container-wrapper" ).draggable().resizable();
+
+
+    $( ".terminal_holder" ).draggable().resizable();
+
+    $( ".blero-grid-wrapper" ).draggable().resizable();
+
+    $( ".task-holder" ).draggable().resizable();
+
+
+    $('div[id^="blc-"]').resizable({
+        handles: 'e, w'
+    });
+
+
+  } );
+
+</script>
+<script src="{% static 'js/dashboard.js' %}"></script>
+
+<script>
+
+</script>
+{% block js %}
+
+{% endblock %}

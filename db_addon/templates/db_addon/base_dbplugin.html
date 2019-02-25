@@ -1,0 +1,135 @@
+
+
+{% load i18n staticfiles thumbnail cms_tags apphooks_config_tags sekizai_tags %}
+
+{% block stylesheets %}
+<link href="{% static 'css/db_plugin.css' %}" rel="stylesheet">
+
+{% endblock %}
+
+
+
+<p class="database_name"><a href="#" data-toggle="offcanvas"><i class="fa fa-database fa-2x"></i></a></p>
+<div id="db_sidebar_container" class="db_sidebar_container" >
+
+{#Databases Link#}
+
+
+<div class="database_list bd-callout bd-callout-info" style ="width:10%; float:left;margin-left: 5%;padding:0%; height: 100%; border-left: solid ">
+    {#Links to individual Databases#}
+     <ul class="nav" id="db_menu">
+        <li> <p style="font-size: 12px">Connected Databases</p></li>
+         {% for plugin in instance.child_plugin_instances %}
+        <li style="cursor: pointer; margin-left:0px"><p onclick="ShowTable('table-content-{{ plugin.id }}')" class="database_name"><i class="fa fa-database fa-1x"></i>  {{ plugin.database_name }}</p></li>
+         {% endfor %}
+     </ul>
+</div>
+
+<div class="individual_db" style="width: 80%; float:left;margin-left:5%; overflow: hidden">
+
+
+
+    {% for plugin in instance.child_plugin_instances %}
+        <div  id="table-content-{{ plugin.id }}" style="width:0px;height:0px;">
+
+        {% render_plugin plugin %}
+        </div>
+    {% endfor %}
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+{% block js %}
+
+
+
+
+
+<script>
+
+
+$('[data-toggle=offcanvas]').click(function() {
+
+
+    var x =document.getElementById("dash_sidebar").style.width;
+    var side_open=40;
+    var side_close=3.5;
+
+    if(x==side_open+"%"){
+
+     {#If bar is closed expand and initialize#}
+
+
+    $('#dash_sidebar').css("width",side_close +"%");
+    $('#main_body').css("margin-left", side_close+"%");
+    $('#db_sidebar_container').css("display","none")
+
+
+
+
+    }
+    else{
+
+        {# if bar is not closed then close it  #}
+    $('#dash_sidebar').css("width",side_open +"%");
+    $('#main_body').css("margin-left", side_open+"%");
+    $('#db_sidebar_container').css("display","block")
+
+
+
+
+    }
+
+
+
+
+})
+
+
+function ShowTable(element) {
+
+    //clear all Tables
+    var databases=document.querySelectorAll('[id^="table-content-"]');
+    [].forEach.call(databases, function(div) {
+
+      div.style.height = "0px";
+      div.style.width="0px";
+
+
+     });
+
+    var databases=document.querySelectorAll('[id^="database-information-"]');
+    [].forEach.call(databases, function(div) {
+
+      div.style.display = "none";
+     });
+
+    var databases=document.querySelectorAll('[id^="table-holder-"]');
+    [].forEach.call(databases, function(div) {
+
+
+      console.log(div)
+
+     });
+
+
+    document.getElementById(element).style.width="800px";
+    document.getElementById(element).style.height="800px";
+    var plugin_id=element.replace('table-content-','')
+    document.getElementById('database-information-'+plugin_id).style.display="block";
+
+    document.getElementById('table-holder-'+plugin_id).style.display="inline";
+
+
+
+}
+
+</script>
+{% endblock js %}
