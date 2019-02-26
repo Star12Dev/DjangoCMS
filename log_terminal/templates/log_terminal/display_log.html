@@ -1,0 +1,25 @@
+<div class="terminal_holder" id="{{ instance.pk }}"  style="{% if position.is_resized %}top:{{ position.top }}; left:{{ position.left }}; width:{{ position.width }}; height:{{ position.height }};{% endif %}">
+<h4>Logging</h4>
+<textarea  class ="textarea_terminal" rows="20"  readonly id="{{ author }}{{ dashboard }}" >{{ logfile }}</textarea>
+</div>
+<LINK REL=StyleSheet HREF="/static/css/log_terminal.css" TYPE="text/css" MEDIA=all>
+<script>
+    window.setInterval(function () {
+        var data = {
+            'dashboard': '{{ dashboard }}',
+            'author': '{{ author }}',
+            'csrfmiddlewaretoken': '{{ csrf_token }}',
+        };
+        $.ajax({
+            url: '/check-log/',
+            type: 'post',
+            data: data,
+            success: function (data) {
+                $('#' + data['id']).val(data['logfile']);
+            },
+            error: function () {
+                console.log('error!');
+            }
+        });
+    }, 5000);
+</script>
